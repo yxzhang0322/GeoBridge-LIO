@@ -1,0 +1,240 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /path_world_ekf_off1
+        - /Path1
+      Splitter Ratio: 0.6000000238418579
+    Tree Height: 654
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5799999833106995
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Name: Time
+    SyncMode: 0
+    SyncSource: ""
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.30000001192092896
+      Cell Size: 10
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 200
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Buffer Length: 2000
+      Class: rviz/Path
+      Color: 38; 255; 255
+      Enabled: true
+      Head Diameter: 0.10000000149011612
+      Head Length: 0.10000000149011612
+      Length: 0.20000000298023224
+      Line Style: Lines
+      Line Width: 0.11999999731779099
+      Name: world_path_on
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 50; 220; 50
+      Pose Style: None
+      Queue Size: 10
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /tapm_on/world_path
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Buffer Length: 2000
+      Class: rviz/Path
+      Color: 239; 41; 41
+      Enabled: false
+      Head Diameter: 0.10000000149011612
+      Head Length: 0.10000000149011612
+      Length: 0.20000000298023224
+      Line Style: Lines
+      Line Width: 0.11999999731779099
+      Name: world_path_off
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 30; 144; 255
+      Pose Style: None
+      Queue Size: 10
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /tapm_off/world_path
+      Unreliable: false
+      Value: false
+    - Alpha: 1
+      Buffer Length: 2000
+      Class: rviz/Path
+      Color: 255; 69; 0
+      Enabled: false
+      Head Diameter: 0.10000000149011612
+      Head Length: 0.10000000149011612
+      Length: 0.20000000298023224
+      Line Style: Billboards
+      Line Width: 0.10000000149011612
+      Name: path_world_ekf_on
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 69; 0
+      Pose Style: None
+      Queue Size: 10
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /tapm_on/path_world_ekf
+      Unreliable: false
+      Value: false
+    - Alpha: 1
+      Buffer Length: 2000
+      Class: rviz/Path
+      Color: 239; 41; 41
+      Enabled: true
+      Head Diameter: 0.10000000149011612
+      Head Length: 0.10000000149011612
+      Length: 0.20000000298023224
+      Line Style: Lines
+      Line Width: 0.10000000149011612
+      Name: path_world_ekf_off
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 215; 0
+      Pose Style: None
+      Queue Size: 10
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /tapm_off/path_world_ekf
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 25; 255; 0
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Billboards
+      Line Width: 0.03999999910593033
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Queue Size: 10
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /tapm_on/path_rtk
+      Unreliable: false
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 0; 0; 0
+    Default Light: true
+    Fixed Frame: world
+    Frame Rate: 10
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 9.74887466430664
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Field of View: 0.7850000262260437
+      Focal Point:
+        X: 69.78590393066406
+        Y: -28.699644088745117
+        Z: -2.338069200515747
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 1.064796805381775
+      Target Frame: world
+      Yaw: 2.084994077682495
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1403
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd0000000200000000000002a3000004e2fc0200000004fb000000100044006900730070006c006100790073010000003d000002cb000000c900fffffffb0000001200530065006c0065006300740069006f006e010000030e0000005c0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007301000003700000005c0000005c00fffffffb0000000a0056006900650077007301000003d20000014d000000a400ffffff0000000300000a0000000039fc0100000001fb0000000800540069006d0065010000000000000a00000003bc00ffffff00000757000004e200000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 2560
+  X: 0
+  Y: 0

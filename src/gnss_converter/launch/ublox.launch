@@ -1,0 +1,26 @@
+<launch>
+
+    <arg name="rviz" default="false" />
+
+
+    <arg name="gnss_pvt_topic_name" default="/ublox_driver/receiver_pvt"/>
+    <arg name="output_navsat_topic_name" default="/gnss_converter/gnss_fix_converted"/>
+    <arg name="output_path_topic_name" default="/gnss_converter/path"/>
+    <arg name="fixed_frame_id" default="map"/>
+
+    <arg name="min_distance" default="0.1"/>
+    <arg name="output_filename" default="10hz_gnss_trajectory_output_01.txt"/>
+
+    <node pkg="gnss_converter" type="pvt_to_evo_node" name="gnss_pvt_converter_node" output="screen">
+        <param name="input_topic" value="$(arg gnss_pvt_topic_name)"/>
+        <param name="output_navsatfix_topic" value="$(arg output_navsat_topic_name)"/>
+        <param name="output_txt_filename" value="$(arg output_filename)"/>
+    </node>
+
+
+    <group if="$(arg rviz)">
+    <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find gnss_converter)/rviz_cfg/rviz.rviz" />
+    </group>
+
+
+</launch>

@@ -1,0 +1,12 @@
+rtk-lio-stable.zip
+/src/gnss_comm/
+/src/livox_ros_driver/
+/src/ublox_driver/
+/external/
+build/
+devel/
+__pycache__/
+*.pyc
+/experiments/
+src/RTK_LIO/Log/*
+!src/RTK_LIO/Log/.gitkeep

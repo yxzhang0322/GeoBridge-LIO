@@ -1,0 +1,88 @@
+common:
+  lid_topic: /livox/lidar
+  imu_topic: /livox/imu
+  gnss_topic: /ublox_driver/receiver_pvt
+  init_time: 0.1
+  imu_sync_offset: 0.1
+preprocess:
+  lidar_type: 1
+  scan_line: 6
+  blind: 2
+  s_window: 5
+  s_window_max: 800
+  s_window_reset_fix: 5
+  s_window_growth_interval: 1
+  velocity_threshold: 0.05
+mapping:
+  acc_cov: 0.1
+  gyr_cov: 0.1
+  b_acc_cov: 0.0001
+  b_gyr_cov: 0.0001
+  laser_point_cov: 0.01
+  mov_threshold: 1.5
+  plane_fit_threshold: 0.1
+  fov_degree: 100
+  det_range: 100.0
+  extrinsic_T:
+  - 0.0
+  - 0.0
+  - -0.01
+  extrinsic_R:
+  - 1
+  - 0
+  - 0
+  - 0
+  - 1
+  - 0
+  - 0
+  - 0
+  - 1
+wahba:
+  bspline_smoothing_factor: 0.1
+rtk:
+  fix_timeout: 1.5
+  time_source: gpst
+  min_fix_for_smoothing: 5
+  lio_time_threshold: 0.1
+  ekf_constraint_enable: false
+  tapm_enable: true
+  tapm_alpha: 0.5
+  tapm_beta: 0.5
+  tapm_lambda_v: 10.0
+  tapm_lambda_a: 100.0
+  tapm_grace_frames: 15
+  tapm_gamma: 0.01
+  tapm_nominal_dt: 0.1
+  tapm_sigma0_xy: 0.1
+  tapm_sigma0_z: 0.2
+  tapm_v_max: 2
+  tapm_v_max_z: 2
+  tapm_a_max: 10.0
+  tapm_a_max_z: 10.0
+  tapm_rtk_sigma_min: 0.02
+  tapm_max_iterations: 15
+  tapm_optimization_window: 5
+  tapm_world_history_size: 20
+  tapm_exit_frame_limit: 5
+  tapm_use_analytic_jacobian: false
+  match_min_ratio: 0.95
+  max_point_range: 500.0
+  min_effective_points: 5
+  enable_manual_ekf_rtk_offset: true
+  manual_ekf_rtk_offset:
+  - 0.0
+  - 0.0
+  - -0.09
+  gpst_leap_seconds: 17.68
+  gpst_time_bias: 0.0
+pgo_sw:
+  enable: true
+  window_size: 15
+  rtk_match_max_dt: 0.1
+  odom_sigma_pos: 0.05
+  odom_sigma_rot: 0.01
+  rtk_sigma_xy: 0.04
+  rtk_sigma_z: 0.02
+export:
+  world_tum_enable: true
+  output_dir: /tmp/geobridge
