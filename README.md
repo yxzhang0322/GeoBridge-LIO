@@ -104,7 +104,7 @@ Use `--position-only` for position references without measured attitude.
 
 ## 5. Dataset and videos
 
-**Dataset:** Self-collected recordings will be distributed through a separate cloud-storage download link. The link will be added here when available.
+**Dataset:** Download the self-collected Bridge recordings from [Google Drive](https://drive.google.com/drive/folders/1vN27Txuj9iULoNYrEILlKrB7BTbfd7qn?usp=sharing).
 
 **Video:** [GeoBridge-LIO experiment video](https://raw.githubusercontent.com/yxzhang0322/GeoBridge-LIO/main/readme/GeoBridge_LIO.mp4).
 
