@@ -66,6 +66,8 @@ source devel/setup.bash
 
 The single recording configuration is [bridge.yaml](src/RTK_LIO/config/bridge.yaml), for the Bridge dataset. Configure the input topics, sensor extrinsics, synchronization, and RTK settings for the recording. Trajectory exports are controlled by the `export` block.
 
+**Coming soon:** Additional YAML configurations for adapting GeoBridge-LIO to other datasets.
+
 The default MID-360 configuration uses:
 
 | Input | ROS topic |
