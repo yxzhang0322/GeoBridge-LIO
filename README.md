@@ -4,8 +4,6 @@
 
 GeoBridge-LIO combines LiDAR–inertial odometry with single-antenna RTK for world-frame pose estimation across indoor and outdoor environments. It uses velocity-guided trajectory alignment to establish the map-to-world transformation and time-anchored pseudo-measurements to support continuous pose output during RTK loss and recovery.
 
-**Related paper:** [GeoBridge-LIO](paper/GeoBridge-LIO.pdf)
-
 **Video:** [Watch the experiment video](https://raw.githubusercontent.com/yxzhang0322/GeoBridge-LIO/main/readme/GeoBridge_LIO.mp4)
 
 **Pipeline:**
